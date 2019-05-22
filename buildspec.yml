@@ -4,11 +4,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing Mocha...
+      - echo Installing source NPM dependencies
+      - npm install
   pre_build:
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install
+      - echo Verifying Templates Lint
+      - node ./internals/scripts/generate-templates-for-linting
+      - echo Unit Testing
       - npm test
   build:
     commands:
@@ -18,6 +20,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - npm run coveralls
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
