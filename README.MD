@@ -15,4 +15,4 @@ npm start
 
 ## Contributing
 
-Please read [./CONTRIBUTING.md](./CONTRIBUTING.md)
+Please read [./CONTRIBUTING.md](./CONTRIBUTING.md). This project uses [material-ui](https://material-ui.com).
