@@ -10,9 +10,9 @@
 
   <!-- Allow installing the app to the homescreen -->
   <meta name="mobile-web-app-capable" content="yes">
-
-  <link rel="icon" href="/favicon.ico" />
-  <title>React.js Boilerplate</title>
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+  <link rel="icon" href="favicon.ico" />
+  <title>Food Access Map</title>
 </head>
 
 <body>
